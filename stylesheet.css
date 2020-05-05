@@ -1,0 +1,277 @@
+body{
+  background-image: url('imgs/bgpac.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+#b1{  
+  top: 78%;
+  right: 36%;
+  transform: translate(50%, -50%);
+  -ms-transform: translate(-50%, -50%); 
+}
+
+#b2{
+
+  top: 70%;
+  left: 36%;
+  transform: translate(-50%, 70%);
+  -ms-transform: translate(-50%, -50%);  
+}
+
+.WelcomeBTN{
+  -webkit-text-stroke: 1px black;
+  position: absolute;
+  background-color: none;
+  color: whitesmoke;
+  font-size: 25px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: myFirstFontBold;
+  background-color: Transparent;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  transition-duration: .2s;
+}
+
+.WelcomeBTN:hover {
+color: palevioletred;
+/* background-size: 70px 100px;
+height: 114px;  
+width: 84px; */
+}
+
+#content {
+    color: white; 
+    background: none; 
+    padding: 15px;
+    position: static;
+  
+}
+ #Login{
+   
+   padding: 200px;
+  position: static;
+  font-weight: bold;
+ 
+ }
+
+#Register{
+  padding: 100px;
+ position: static;
+ font-weight: bold;
+ 
+ 
+}
+
+#Settings{
+  padding: 50px;
+ position: static;
+ font-weight: bold;
+ 
+ 
+}
+ #Welcome {
+   padding: 100px;
+   position: center;
+ }
+
+ #header{
+  font-family: myFirstFont;
+  display: inline-block;
+  vertical-align: middle;
+ 
+
+}
+#logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30%;
+
+
+}
+.tablink {
+  background-color: #2F4F4F;
+  opacity: 0.9;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  font-family: myFirstFont;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: rgb(64, 104, 104);
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+  color: #555;
+  display: none;
+/*   padding: 50px;
+ */  text-align: center;
+}
+
+#aboutTitle{
+  color: rgb(247, 235, 235);
+  text-align: center;
+  font-family: myFirstFontBold;
+  font-weight: 500px;
+  -webkit-text-stroke: 1px black;
+}
+#About
+{
+  display: none;
+}
+
+ #Messege{
+  color: rgb(247, 235, 235);
+  display: none;
+  padding: 50px;
+  text-align: center;
+  font-family: myFirstFontBold;
+  font-weight: 500px;
+  -webkit-text-stroke: 1px black;
+}
+#About > p{
+  font-family: daniellesfont;
+  text-align: left;
+  color: darkslategrey;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(SansationLight.woff);
+}
+
+@font-face {
+  font-family: myFirstFontBold;
+  src: url(HUNTER.woff);
+  font-weight: bold;
+}
+@font-face
+{
+  font-family: daniellesfont;
+  src: url(SansationBold.woff);
+  font-weight: bold;
+}
+#AboutLNK{
+ color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  width: 25%;
+  text-decoration: none;
+}
+
+#wrongpwd{
+  display: none;
+}
+
+form .error {
+  display: block;
+  color: #ff0000;
+  text-align: center;
+}
+
+.errorMassage{
+  color: #ff0000;
+}
+
+#nameOfuser {
+
+ font-size: larger;
+ font-family: myFirstFont;
+ text-decoration: bold;
+ -webkit-text-fill-color: rgb(247, 235, 235);
+  -webkit-text-stroke-width: 2.00px;
+}
+#helloLine{
+  text-align: center;
+}
+ 
+#gameSettingsLine{
+  text-align: center;
+}
+
+#initialGame{
+  display: flex;
+  flex-direction: row;
+}
+
+canvas
+{
+  background-image: url('imgs/pattern.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  flex:1;
+  align-self: center;
+  float: right;
+}
+
+.settingsDisplay{
+  margin-left: 0;
+  background-image: url('imgs/pattern.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  flex: 0 0 35%;
+  text-align: left;
+  float: left;
+}
+
+#secondSettingsDisplay{
+ 
+  text-align: center;
+
+}
+
+footer
+{
+  background-color: #2F4F4F;
+  opacity: 0.8;
+  color: white;
+  border: none;
+  outline: none;
+/*   cursor: pointer;
+ *//*   padding: 14px 16px;
+  font-size: 17px; */
+  width: 100%;
+  height: 7%;
+  font-family: myFirstFont;
+/*   display: inline-block;
+ */ 
+/*  display: inline-table;
+ */ position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+ /*  padding: 1rem; */
+  text-align: center;
+}
+
+.contact{
+/*   float: left;
+ */  display:inline-block;
+ vertical-align: middle;
+}
+
+.contactBTN{
+ 
+  background-color: transparent;
+  border: none;
+  display:inline-block;
+
+}
+
+

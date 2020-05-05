@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="js/jquery-3.4.1.slim.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/windows.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/form-validation.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="Login.css">
+</head>
+
+<body>
+	<header style=" justify-content: center;
+	align-items: center;">
+		<img id="logo" src="imgs/logo-mspac.png" width="148" height="89" alt="Div">
+		<h3 id="header">Danielle Lavi - 203097225 & Mor Nahum - 205996747</h3>
+	</header>
+
+	<div id="menu">
+		<button class="tablink" onclick="changeTab('Welcome')">Welcome</button>
+		<button class="tablink" onclick="changeTab('Register')">Register</button>
+		<button class="tablink" onclick="changeTab('Login')">Login</button>
+		<button class="tablink" onclick="openmodel('#About')">About</button>
+	</div>
+	<!-- 	<a id="AboutLNK" href="#About" rel="modal:open"></a>
+ -->
+	<div id="content">
+		<div id="Welcome" class="tabcontent">
+			<img src="imgs/div-background.jpg" alt="Div" style="width:50%">
+			<button class="WelcomeBTN" id="b1" onclick="changeTab('Login')">Login</button>
+			<button class="WelcomeBTN" id="b2" onclick="changeTab('Register')">Register</button>
+
+		</div>
+
+		<div id="Register" class="tabcontent forms">
+			<form id="registrationForm" name="registrationForm" method="get" action="">
+				<h1>Register</h1>
+				<fieldset>
+					<legend>Please Fill In Your Details To Join The Game</legend>
+					<p>
+						<label for="username">User Name <span>(required, at least 2 characters)</span></label>
+						<input id="username" name="username">
+					</p>
+					<p>
+						<label for="firstName">First Name <span>(required, at least 2 characters)</span></label>
+						<input id="firstName" name="firstName" type="text">
+					</p>
+					<p>
+						<label for="lastName">Last Name <span>(required, at least 2 characters)</span></label>
+						<input id="lastName" name="lastName" type="text">
+					</p>
+					<p>
+						<label for="password">Password
+							</br>
+							<span>(required, at least 6 characters, at least one number and
+								one letter)</span></label>
+						<input id="password" name="password" type="password">
+					</p>
+					<p>
+						<label for="email">Email <span>(required)</span></label>
+						<input id="email" name="email" type="email">
+					</p>
+					<p>
+						<label for="birthDate">Date Of Birth <span>(required)</span></label>
+						<input id="birthDate" name="birthDate" type="date">
+					</p>
+					<button class="btn btn-primary btn-block btn-large" type="submit">Register</button>
+				</fieldset>
+			</form>
+		</div>
+
+		<div class="forms tabcontent" id="Login">
+			<form id="loginForm" name="loginForm" method="get" action="">
+				<h1>Login</h1>
+				<p>
+					<label for="username">User Name:</label>
+					<input id="username" name="username" autocomplete="off">
+				</p>
+				<p>
+					<label for="password">Password : </label>
+					<input id="password" name="password" type="password" autocomplete="off">
+				</p>
+				<p id="wrongpwd">Wrong User Name Or Password, Please Try Again</p>
+				<button class="btn btn-primary btn-block btn-large" type="submit" onclick="login()">Login</button>
+			</form>
+		</div>
+
+		<!-- <div class="page tabcontent" id="Login">
+			<div class="container">
+			  <div class="left">
+				<div class="login">Login</div>
+				<div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
+			  </div>
+			  <div class="right">
+				<svg viewBox="0 0 320 300">
+				  <defs>
+					<linearGradient
+									inkscape:collect="always"
+									id="linearGradient"
+									x1="13"
+									y1="193.49992"
+									x2="307"
+									y2="193.49992"
+									gradientUnits="userSpaceOnUse">
+					  <stop
+							style="stop-color:#ff00ff;"
+							offset="0"
+							id="stop876" />
+					  <stop
+							style="stop-color:#ff0000;"
+							offset="1"
+							id="stop878" />
+					</linearGradient>
+				  </defs>
+				  <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+				</svg>
+				<div class="form">
+				  <label for="email">Email</label>
+				  <input type="email" id="email">
+				  <label for="password">Password</label>
+				  <input type="password" id="password">
+				  <input type="submit" id="submit" value="Submit">
+				</div>
+			  </div>
+			</div>
+		  </div> -->
+
+		<div id="About" class="modal">
+			<h1 id="aboutTitle">Pacman</h1>
+			<p>This Website Is Brought To You By Danielle Lavi & Mor Nahum
+				As Part Of An Assignment In The Course "Web Development Enviroments"</p>
+			<p>The jquery Plugins We Used For The Website:</p>
+			<p>- jquery Validation Plugin - For The Login And Settings Forms </p>
+			<p>- jquery Modal Plugin - for the About and messages pages </p>
+			<p>Our Main Difficulties Were Learning How To Use The jquery Plugins
+				And Programming Without Using A Compiler And A Proper Debuger.</p>
+		</div>
+
+
+		<div id="Settings" class="forms tabcontent">
+			<h1>Settings</h1>
+			<form id="settings" name="settings" method="get" action="">
+				<fieldset>
+					<legend>Please Fill In Your Preferred Settings</legend>
+					<legend>Keys</legend>
+					<p>
+						<label for="upKey">Up Key</label>
+						<input type="text" id="upKey" name="upKey" autocomplete="off" onkeydown="setUpKey(event)">
+						<span id="up"></span>
+					</p>
+					<p>
+						<label for="downKey">Down Key</label>
+						<input type="text" id="downKey" name="downKey" autocomplete="off" onkeydown="setDownKey(event)">
+						<span id="down"></span>
+					</p>
+					<p>
+						<label for="leftKey">Left Key</label>
+						<input type="text" id="leftKey" name="leftKey" autocomplete="off" onkeydown="setLeftKey(event)">
+						<span id="left"></span>
+					</p>
+					<p>
+						<label for="rightKey">Right Key</label>
+						<input type="text" id="rightKey" name="rightKey" autocomplete="off"
+							onkeydown="setRightKey(event)">
+						<span id="right"></span>
+					</p>
+					<span class="errorMassage" id="sameKeyCodes"></span>
+					<p>
+						<label for="numOfBalls">Enter The Number Of Balls</label>
+						<input type="text" id="numOfBalls" name="numOfBalls">
+					</p>
+					<p>
+						<label for="firstColor">Choose The First Color:</label>
+						<input type="color" id="firstColor" name="firstColor">
+					</p>
+					<p>
+						<label for="secondColor">Choose The Second Color:</label>
+						<input type="color" id="secondColor" name="secondColor">
+					</p>
+					<p>
+						<label for="thirdColor">Choose The Third Color:</label>
+						<input type="color" id="thirdColor" name="thirdColor">
+					</p>
+					<span class="errorMassage" id="sameColors"></span>
+					<p>
+						<label for="setTime">Enter Time</label>
+						<input type="text" id="setTime" name="setTime">
+					</p>
+					<p>
+						<label for="numOfMonsters">Enter Number Of Monsters</label>
+						<input type="text" id="numOfMonsters" name="numOfMonsters">
+					</p>
+					<button class="btn btn-primary btn-block btn-large" id="start" type="submit">Start Game</button>
+					<button class="btn btn-primary btn-block btn-large" type="button" onclick="DefSe()">Default
+						settings</button>
+					<button class="btn btn-primary btn-block btn-large" type="button" onclick="randSe()">Random</button>
+				</fieldset>
+			</form>
+
+		</div>
+
+		<div id="initialGame" class="tabcontent">
+
+			<div id="Messege" class="modal">
+				<p id="innerMessege"></p>
+				<button id="btn" type="button" onclick="newGame()">New Game</button>
+			</div>
+
+			<div class="settingsDisplay">
+				<p id="gameSettingsLine">Game Settings:</p>
+				<p>Up Key: <span id="upKeydisplay"></span></p>
+				<p>Down Key: <span id="downKeydisplay"></span></p>
+				<p>Left Key: <span id="leftKeydisplay"></span></p>
+				<p>Right Key: <span id="rightKeydisplay"></span></p>
+				<p>Total Food: <span id="food"></span></p>
+				<p>Total Time: <span id="totalTime"></span></p>
+				<p>Number Of Monsters: <span id="numOfMonstersDisplay"></span></p>
+				<p>5 Points Balls: <input type="color" id="fiveBall" disabled></input></p>
+				<p>15 Points Balls: <input type="color" id="fifteenBall" disabled></input></p>
+				<p>25 Points Balls: <input type="color" id="twentyfiveBall" disabled></input></p>
+			</div>
+			<div class="settingsDisplay" id="secondSettingsDisplay">
+				<p id="helloLine">Hello <span id=nameOfuser></span> </p>
+				</br>
+				<div id="score">
+					<label for="lblScore">SCORE:</label>
+					<input id="lblScore" type="text" />
+				</div>
+				</br>
+				<div id="time">
+					<label for="lblTime">TIME:</label>
+					<input id="lblTime" type="text" />
+				</div>
+				</br>
+				<div>
+					<img id="1" src="imgs/lives.png" width="20" height="20">
+					<img id="2" src="imgs/lives.png" width="20" height="20">
+					<img id="3" src="imgs/lives.png" width="20" height="20">
+					<img id="4" src="imgs/lives.png" width="20" height="20">
+					<img id="5" src="imgs/lives.png" width="20" height="20">
+				</div>
+				</br>
+				</br>
+				<button id=mute type=button style="background-color: transparent;
+			border: none; display:inline-block;" onclick="Mute()"><img src="imgs/sound.png" height="30" width="30"></button>
+				</br>
+				</br>
+				<button id="newGame" class="btn btn-primary btn-block btn-large" style="width:50%;" type=button onclick="newGame()">New Game</button>
+			</div>
+			<div id="game">
+				<canvas id="canvas" height="600" width="900"></canvas>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<span>This Website Is Brought To You by Mor & Danielle Gaming.</span>
+		<span> Contact Us: <span>Mor</span>
+			<form class="contact" action="mailto:namor@post.bgu.ac.il" method="post" enctype="text/plain">
+				<button class="contactBTN" type="submit"><img src="imgs/mail.png" height="60" width="60"></button>
+			</form>
+			Danielle
+			<form class="contact" action="mailto:lavida@post.bgu.ac.il" method="post" enctype="text/plain">
+				<button class="contactBTN" type="submit"><img src="imgs/mail.png" height="60" width="60" /></button>
+			</form>
+		</span>
+	</footer>
+</body>
+
+</html>
