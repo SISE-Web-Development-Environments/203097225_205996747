@@ -15,9 +15,12 @@ function changeTab(fieldName) {
   
     // Show the specific tab content
     document.getElementById(fieldName).style.display = "block";
-    /* if(fieldName == 'Welcome'){
-      window.scrollTo(0,50);
-    } */
+    if(fieldName == 'Welcome'){
+      window.scrollTo(0,30);
+    }
+    if(fieldName == 'Register'){
+      window.scrollTo(0,100);
+    }
   }
 
   function openmodel(Name){

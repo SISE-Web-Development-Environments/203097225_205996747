@@ -55,7 +55,7 @@ var gameover = false;
 
 $(document).ready(function () {
 
-	window.scrollTo(0, 160);
+	window.scrollTo(0, 30);
 
 	initObjects();
 
@@ -76,6 +76,7 @@ $(document).ready(function () {
 			//	changeTab('Settings');
 			$('#Login').css('display', 'none');
 			$('#Settings').css('display', 'block');
+			window.scrollTo(0,160);
 
 			return false;
 		}
@@ -164,6 +165,7 @@ $(document).ready(function () {
 			$('#Settings').css('display', 'none');
 			Start();
 			$('#initialGame').css('display', 'block');
+
 			//	return false;
 		}
 	});
@@ -305,7 +307,6 @@ function initObjects() {
 
 	introAudio = new Audio('audio/mazeStart.mp3');
 	introAudio.loop = true;
-	introAudio.play();
 
 	pacmanEats = new Audio('audio/pacman_chomp.wav');
 	pacmanEatsBonus = new Audio('audio/pacman_eatfruit.wav');
@@ -326,6 +327,7 @@ function Start() {
 	timer = new Date(setTime);
 	var currentTime = new Date();
 	time_elapsed = (currentTime - start_time) / 1000;
+	introAudio.play();
 	for (var i = 0; i < 16; i++) {
 		board[i] = new Array();
 		//put obstacles in (i=3,j=3) and (i=3,j=4) and (i=3,j=5), (i=6,j=1) and (i=6,j=2)
@@ -496,7 +498,7 @@ function GetKeyPressed() {
 function Draw(x) {
 
 	if (init) {
-		window.scrollTo(0, 140);
+		window.scrollTo(0, 135);
 	}
 	//context.clearRect(0, 0, canvas.width, canvas.height);
 	init = false;

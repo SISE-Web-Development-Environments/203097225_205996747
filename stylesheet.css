@@ -54,17 +54,17 @@ width: 84px; */
 }
  #Login{
    
-   padding: 200px;
+   padding: 150px;
   position: static;
   font-weight: bold;
  
  }
 
 #Register{
-  padding: 100px;
+  padding: 50px;
  position: static;
  font-weight: bold;
- 
+ zoom: 80%;
  
 }
 
@@ -72,7 +72,7 @@ width: 84px; */
   padding: 50px;
  position: static;
  font-weight: bold;
- 
+ zoom: 64%;
  
 }
  #Welcome {
@@ -218,11 +218,12 @@ canvas
   flex:1;
   align-self: center;
   float: right;
+  zoom: 85%;
 }
 
 .settingsDisplay{
-  margin-left: 0;
-  background-image: url('imgs/pattern.jpg');
+/*   margin-left: 0;
+ */  background-image: url('imgs/pattern.jpg');
   background-repeat: repeat;
   background-attachment: fixed;
   flex: 0 0 35%;
