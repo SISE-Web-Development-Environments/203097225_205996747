@@ -246,6 +246,26 @@ function setRightKey(e) {
 
 function newGame() {
 
+	reset();
+	$('#initialGame').css('display', 'none');
+	$('#Settings').css('display', 'block');
+
+	//	$("#Messege").modal({close: true});
+	$.modal.close();
+}
+
+function Mute() {
+	if (introAudio.paused) {
+		introAudio.play();
+	}
+	else {
+		introAudio.pause();
+		introAudio.currentTime = 0;
+	}
+}
+function reset(){
+	if(!init){
+
 	gameover = false;
 	newgame = true;
 	giftCount = -8;
@@ -262,31 +282,9 @@ function newGame() {
 	updateLife();
 	introAudio.pause();
 	introAudio.currentTime = 0;
-
-	$('#initialGame').css('display', 'none');
-	$('#Settings').css('display', 'block');
-
 	window.clearInterval(interval);
-
-	//	$("#Messege").modal({close: true});
-	$.modal.close();
-}
-
-function Mute() {
-	if (introAudio.paused) {
-		introAudio.play();
 	}
-	else {
-		introAudio.pause();
-		introAudio.currentTime = 0;
-	}
-}
-function PauseAudio(){
-	introAudio.pause();
-    introAudio.currentTime = 0;
-    pacmanEats.pause();
-  	pacmanEatsBonus.pause();
-	pacmanDies.pause();
+	
 }
 function initObjects() {
 	//monsters

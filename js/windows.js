@@ -6,7 +6,6 @@ $(document).ready(function () {
 });
 
 function changeTab(fieldName) {
-    PauseAudio();
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -18,9 +17,17 @@ function changeTab(fieldName) {
     document.getElementById(fieldName).style.display = "block";
     if(fieldName == 'Welcome'){
       window.scrollTo(0,30);
+      reset();
+
     }
     if(fieldName == 'Register'){
       window.scrollTo(0,100);
+      reset();
+
+    }
+    if(fieldName == 'Login'){
+      reset();
+
     }
   }
 
