@@ -12,9 +12,9 @@ Mor Nahum – 205996747
 
 #### We Added the Functionality:
 
-* Pill – an image of Pill that changes his place randomly on the board and by eaten it the Player get 1 more life (if he have less then 5 lives).
+* Pill – an image of Pill that changes its place randomly on the board and by eating it the Player gets 1 more life (if he has less then 5 lives).
 
-* Clock – an image of Clock that changes his place randomly on the board and by eaten it the Player get 15 seconds added to the game timer.
+* Clock – an image of Clock that changes its place randomly on the board and by by eating it the Player gets 15 seconds added to the game timer.
 
 ## Have Fun!! 
 
