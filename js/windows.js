@@ -6,6 +6,7 @@ $(document).ready(function () {
 });
 
 function changeTab(fieldName) {
+    PauseAudio();
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent;
     tabcontent = document.getElementsByClassName("tabcontent");

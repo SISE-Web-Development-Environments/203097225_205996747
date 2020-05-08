@@ -281,7 +281,13 @@ function Mute() {
 		introAudio.currentTime = 0;
 	}
 }
-
+function PauseAudio(){
+	introAudio.pause();
+    introAudio.currentTime = 0;
+    pacmanEats.pause();
+  	pacmanEatsBonus.pause();
+	pacmanDies.pause();
+}
 function initObjects() {
 	//monsters
 	blueImage = new Image();
@@ -307,7 +313,6 @@ function initObjects() {
 
 	introAudio = new Audio('audio/mazeStart.mp3');
 	introAudio.loop = true;
-
 	pacmanEats = new Audio('audio/pacman_chomp.wav');
 	pacmanEatsBonus = new Audio('audio/pacman_eatfruit.wav');
 	pacmanDies = new Audio('audio/pacman_death.wav');
